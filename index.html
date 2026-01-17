@@ -11,43 +11,32 @@
       --pink:#ec4899;--cyan:#22d3ee;--emerald:#10b981;--violet:#8b5cf6;--amber:#f59e0b;
     }
     *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-    body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at top,#0f172a,var(--bg1) 60%,#000);color:#fff}
+    body{margin:0;min-height:100svh;display:flex;align-items:flex-start;justify-content:center;background:radial-gradient(circle at top,#0f172a,var(--bg1) 60%,#000);color:#fff}
 
     /* Phone shell */
-    .phone{width:390px;max-width:100vw;height:94vh;max-height:860px;background:#0007;border-radius:44px;padding:12px;border:1px solid var(--border);backdrop-filter:blur(18px);box-shadow:0 40px 120px #000c}
+    .phone{width:390px;max-width:100vw;height:94svh;max-height:860px;background:#0007;border-radius:44px;padding:12px;border:1px solid var(--border);backdrop-filter:blur(18px);box-shadow:0 40px 120px #000c}
 
     /* App screen */
     .screen{height:100%;background:linear-gradient(180deg,#0b1220f2,#070b16f2);border-radius:32px;padding:18px 16px 40px;overflow-y:auto;border:1px solid #ffffff2a}
 
-/* Better visibility – keep gradients visible */
-.glass{border-color:rgba(255,255,255,0.28)}
-.total-card{box-shadow:0 0 30px rgba(34,197,94,0.25), inset 0 0 0 1px rgba(255,255,255,0.18)}
-.amount-card{box-shadow:0 0 30px rgba(168,85,247,0.25), inset 0 0 0 1px rgba(255,255,255,0.18)}
+    .glass{border-color:rgba(255,255,255,0.28)}
+    .total-card{box-shadow:0 0 30px rgba(34,197,94,0.25), inset 0 0 0 1px rgba(255,255,255,0.18)}
+    .amount-card{box-shadow:0 0 30px rgba(168,85,247,0.25), inset 0 0 0 1px rgba(255,255,255,0.18)}
 
-input,select{background:rgba(255,255,255,0.14);border-color:rgba(255,255,255,0.35);color:#e5e7eb}
+    input,select{background:rgba(255,255,255,0.14);border-color:rgba(255,255,255,0.35);color:#e5e7eb}
 
-/* Fix dropdown visibility */
-select option{
-  color:#0b1220;            /* dark text */
-  background:#e5e7eb;       /* light background */
-}
-select:focus option:checked{
-  background:#6366f1;
-  color:#ffffff;
-}
-button.secondary{background:linear-gradient(135deg, rgba(34,211,238,0.25), rgba(139,92,246,0.25));border-color:rgba(255,255,255,0.35)}
+    select option{color:#0b1220;background:#e5e7eb}
+    select:focus option:checked{background:#6366f1;color:#ffffff}
 
-.sub{color:#cbd5e1}
-.muted{color:#cbd5e1}
+    .sub{color:#cbd5e1}
+    .muted{color:#cbd5e1}
 
-/* Mobile optimization */
-
-@media (max-width: 480px){
-  .phone{width:100vw;height:100vh;max-height:none;border-radius:0;padding:8px}
-  .screen{border-radius:20px;padding-bottom:60px}
-  h1{font-size:20px}
-  button{font-size:15px;padding:12px}
-}
+    @media (max-width: 480px){
+      .phone{width:100vw;height:100svh;max-height:none;border-radius:0;padding:8px}
+      .screen{border-radius:20px;padding-bottom:40px}
+      h1{font-size:20px}
+      button{font-size:15px;padding:12px}
+    }
 
     .screen::-webkit-scrollbar{width:6px}
     .screen::-webkit-scrollbar-thumb{background:#ffffff22;border-radius:10px}
@@ -65,40 +54,18 @@ button.secondary{background:linear-gradient(135deg, rgba(34,211,238,0.25), rgba(
     input,select,button{width:100%;border-radius:14px;padding:11px 12px;border:1px solid #ffffff22;outline:none;background:#ffffff12;color:#fff;font-size:14px}
     input::placeholder{color:#9ca3af}
 
-    button.primary{
-  background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);
-  font-weight:800;
-  border:none;
-  box-shadow:0 6px 0 #3b3dbf, 0 10px 25px rgba(0,0,0,0.5);
-  transform:translateY(0);
-  transition:all .15s ease;
-}
-button.primary:active{
-  transform:translateY(4px);
-  box-shadow:0 2px 0 #3b3dbf, 0 6px 12px rgba(0,0,0,0.5);
-}
-    button.secondary{
-  background:linear-gradient(135deg, rgba(34,211,238,0.35), rgba(139,92,246,0.35));
-  border:1px solid rgba(255,255,255,0.35);
-  box-shadow:0 5px 0 rgba(255,255,255,0.25), 0 10px 20px rgba(0,0,0,0.45);
-  transition:all .15s ease;
-}
-button.secondary:active{
-  transform:translateY(4px);
-  box-shadow:0 2px 0 rgba(255,255,255,0.25), 0 6px 12px rgba(0,0,0,0.45);
-}
+    button.primary{background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);font-weight:800;border:none;box-shadow:0 6px 0 #3b3dbf, 0 10px 25px rgba(0,0,0,0.5);transition:all .15s ease}
+    button.primary:active{transform:translateY(4px);box-shadow:0 2px 0 #3b3dbf, 0 6px 12px rgba(0,0,0,0.5)}
 
-/* Global hover effect */
-button:hover{
-  filter:brightness(1.15);
-}
+    button.secondary{background:linear-gradient(135deg, rgba(34,211,238,0.35), rgba(139,92,246,0.35));border:1px solid rgba(255,255,255,0.35);box-shadow:0 5px 0 rgba(255,255,255,0.25), 0 10px 20px rgba(0,0,0,0.45);transition:all .15s ease}
+    button.secondary:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(255,255,255,0.25), 0 6px 12px rgba(0,0,0,0.45)}
+    button:hover{filter:brightness(1.15)}
 
     .footer{text-align:center;font-size:10px;color:#94a3b8;margin:16px 0}
     .hidden{display:none!important}
 
     .danger{background:#ef44441a;border:1px solid #ef444466}
 
-    /* Modal */
     .overlay{position:fixed;inset:0;background:#000b;display:flex;align-items:center;justify-content:center;z-index:100}
     .modal{width:280px;background:#0b1220;border-radius:20px;padding:18px;border:1px solid #ef444466;text-align:center}
 
@@ -106,16 +73,9 @@ button:hover{
     .back{width:auto;padding:6px 10px;border-radius:10px}
     .title-sm{font-weight:700;letter-spacing:.3px}
 
-    /* History UI */
     .history-item{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:14px;background:#ffffff10;border:1px solid #ffffff22;margin-top:8px}
-    .badge{font-size:10px;padding:3px 8px;border-radius:999px;background:#ffffff22}
     .amt{font-weight:700}
-    .muted{font-size:11px;color:#9ca3af}
 
-    .chip-row{display:flex;gap:6px;flex-wrap:wrap}
-    .chip{padding:6px 10px;border-radius:999px;font-size:11px;border:1px solid #ffffff33;background:#ffffff14}
-
-    /* Section title */
     .section-title{margin-top:18px;font-size:13px;font-weight:700;color:#c7d2fe;letter-spacing:.3px}
   </style>
 </head>
@@ -124,7 +84,6 @@ button:hover{
 <div class="phone">
   <div class="screen">
 
-    <!-- HOME PAGE -->
     <div id="homePage">
       <div id="titleArea">
         <h1 id="appTitle">BARHAT BSDC</h1>
@@ -160,17 +119,18 @@ button:hover{
         <button class="secondary" onclick="openAllTotalPdfPage()">All Total PDF</button>
       </div>
 
+      <div class="row" style="margin-top:10px">
+        <button class="secondary" onclick="openDeletePage()">Admin Panel</button>
+      </div>
+
       <div class="footer">Made with ❤️ by Jay</div>
     </div>
 
-    <!-- HISTORY PAGE -->
     <div id="historyPage" class="hidden">
       <div class="topbar">
         <button class="secondary back" onclick="goHome()">←</button>
         <div class="title-sm">Expense History</div>
-        <div></div>
       </div>
-
       <div class="glass">
         <div class="row">
           <select id="historyMonth"></select>
@@ -178,92 +138,71 @@ button:hover{
         </div>
         <button class="secondary" style="margin-top:10px" onclick="renderHistory()">Apply Filter</button>
       </div>
-
       <div class="section-title">Records</div>
       <div id="historyList"></div>
     </div>
 
-    <!-- CATEGORY PDF PAGE -->
     <div id="categoryPdfPage" class="hidden">
       <div class="topbar">
         <button class="secondary back" onclick="goHome()">←</button>
         <div class="title-sm">Category PDF</div>
-        <div></div>
       </div>
-
       <div class="glass">
         <div style="font-size:12px">Category</div>
         <select id="pdfCategory"></select>
-
         <div class="row" style="margin-top:10px">
           <select id="pdfMonth"></select>
           <input id="pdfYear" type="number" placeholder="Year" />
         </div>
-
         <button class="primary" style="margin-top:12px" onclick="generateCategoryPDF()">Generate PDF</button>
       </div>
     </div>
 
-    <!-- ALL TOTAL PDF PAGE -->
     <div id="allTotalPdfPage" class="hidden">
       <div class="topbar">
         <button class="secondary back" onclick="goHome()">←</button>
         <div class="title-sm">All Total PDF</div>
-        <div></div>
       </div>
-
       <div class="glass">
         <div class="row">
           <select id="allPdfMonth"></select>
           <input id="allPdfYear" type="number" placeholder="Year" />
         </div>
-
         <button class="primary" style="margin-top:12px" onclick="generateMonthlyPDF()">Generate Monthly PDF</button>
         <button class="secondary" style="margin-top:10px" onclick="generateAbsolutePDF()">Absolute Total PDF</button>
       </div>
     </div>
 
-    <!-- DELETE PAGE -->
     <div id="deletePage" class="hidden">
       <div class="topbar">
         <button class="secondary back" onclick="goHome()">←</button>
         <div class="title-sm">Delete Expense (Admin)</div>
-        <div></div>
       </div>
-
       <div class="glass danger">
         <div style="font-size:12px">Category</div>
         <select id="delCategory"></select>
-
         <div class="row" style="margin-top:10px">
           <select id="delMonth"></select>
           <input id="delYear" type="number" placeholder="Year" />
         </div>
-
         <div style="margin-top:10px">
           <div style="font-size:12px">Exact Date</div>
           <input id="delDate" type="date" />
         </div>
-
         <button class="primary" style="background:linear-gradient(90deg,#ef4444,#fb7185)" onclick="deleteSingle()">Delete Expense</button>
         <button class="secondary" style="border:1px solid #ef4444;color:#fecaca;margin-top:8px" onclick="showConfirm()">Delete ALL (Category)</button>
-
-        <div style="font-size:10px;color:#fca5a5;text-align:center;margin-top:8px">Hold BARHAT BSDC for 5 seconds to open this page</div>
+        <div style="font-size:10px;color:#fca5a5;text-align:center;margin-top:8px">Use the Admin Panel button on Home screen to open this page</div>
       </div>
     </div>
 
-    <!-- DELETE ALL PAGE -->
     <div id="deleteAllPage" class="hidden">
       <div class="topbar">
         <button class="secondary back" onclick="openDeletePage()">←</button>
         <div class="title-sm">Delete ALL Expenses</div>
-        <div></div>
       </div>
-
       <div class="glass danger">
         <div style="font-size:12px">Select Category</div>
         <select id="delAllCategory"></select>
-
         <button class="primary" style="background:linear-gradient(90deg,#dc2626,#fb7185);margin-top:12px" onclick="deleteAllByCategory()">Delete ALL</button>
         <div style="font-size:10px;color:#fca5a5;text-align:center;margin-top:6px">This action cannot be undone</div>
       </div>
@@ -272,7 +211,6 @@ button:hover{
   </div>
 </div>
 
-<!-- CONFIRM MODAL -->
 <div id="confirmModal" class="overlay hidden">
   <div class="modal">
     <div style="color:#f87171;font-weight:700">Warning</div>
@@ -299,7 +237,12 @@ function showPage(id){
   const screen=document.querySelector('.screen'); if(screen) screen.scrollTop=0;
 }
 
-function init(){fillSelects();updateMonthTotal();setupSecretHold();watchMonthChange();runTests();}
+// 🔧 FIX: define openDeletePage to avoid ReferenceError
+function openDeletePage(){
+  showPage("deletePage");
+}
+
+function init(){fillSelects();updateMonthTotal();watchMonthChange();runTests();}
 
 function fillSelects(){
   ["categoryInput","delCategory","delAllCategory","pdfCategory"].forEach(id=>{
@@ -339,9 +282,10 @@ function updateMonthTotal(){
 
 function watchMonthChange(){let l=new Date().getMonth();setInterval(()=>{const n=new Date().getMonth();if(n!==l){l=n;updateMonthTotal()}},60000)}
 
-function openDeletePage(){showPage("deletePage")}
 function openHistoryPage(){renderHistory();showPage("historyPage")}
 function goHome(){showPage("homePage")}
+function openCategoryPdfPage(){showPage("categoryPdfPage")}
+function openAllTotalPdfPage(){showPage("allTotalPdfPage")}
 
 function renderHistory(){
   const list=$("historyList"); if(!list) return;
@@ -366,13 +310,7 @@ function renderHistory(){
     const d=new Date(e.date);
     const item=document.createElement("div");
     item.className="history-item";
-    item.innerHTML=`
-      <div>
-        <div style="font-weight:600">${e.category}</div>
-        <div class="muted">${d.toDateString()} • ${e.time}</div>
-      </div>
-      <div class="amt">₹ ${Number(e.amount).toLocaleString()}</div>
-    `;
+    item.innerHTML=`<div><div style=\"font-weight:600\">${e.category}</div><div class=\"muted\">${d.toDateString()} • ${e.time}</div></div><div class=\"amt\">₹ ${Number(e.amount).toLocaleString()}</div>`;
     list.appendChild(item);
   });
 }
@@ -401,18 +339,6 @@ function deleteAllByCategory(){
   alert(`${b-expenses.length} expenses deleted from ${cat}`);
   goHome();
 }
-
-function setupSecretHold(){
-  const t=$("appTitle"); if(!t) return;
-  let timer=null;
-  const s=()=>{clearTimeout(timer);timer=setTimeout(openDeletePage,5000)};
-  const c=()=>clearTimeout(timer);
-  ["mousedown","touchstart"].forEach(e=>t.addEventListener(e,s));
-  ["mouseup","mouseleave","touchend","touchcancel"].forEach(e=>t.addEventListener(e,c));
-}
-
-function openCategoryPdfPage(){showPage("categoryPdfPage")}
-function openAllTotalPdfPage(){showPage("allTotalPdfPage")}
 
 function generateCategoryPDF(){
   const cat=$("pdfCategory").value;
@@ -457,7 +383,6 @@ function createInvoicePDF(title,data,groupByCategory=false){
   const pageHeight = doc.internal.pageSize.getHeight();
   const margin = 12;
 
-  // ===== COLORS =====
   const primary=[99,102,241];
   const accent=[236,72,153];
   const dark=[30,41,59];
@@ -466,7 +391,6 @@ function createInvoicePDF(title,data,groupByCategory=false){
 
   let y=18;
 
-  // ===== HEADER =====
   doc.setFillColor(...primary);
   doc.rect(0,0,pageWidth,36,"F");
   doc.setFontSize(18);
@@ -475,7 +399,6 @@ function createInvoicePDF(title,data,groupByCategory=false){
   doc.setFontSize(11);
   doc.text("Expense Report", pageWidth/2, 26, {align:"center"});
 
-  // ===== META CARD =====
   y=44;
   doc.setFillColor(...light);
   doc.roundedRect(margin,y-10,pageWidth-margin*2,28,4,4,"F");
@@ -496,7 +419,6 @@ function createInvoicePDF(title,data,groupByCategory=false){
 
   y += 26;
 
-  // ===== SECTION TITLE =====
   doc.setFontSize(12);
   doc.setTextColor(...dark);
   doc.text("Records", margin, y);
@@ -512,7 +434,6 @@ function createInvoicePDF(title,data,groupByCategory=false){
       y = 20;
     }
 
-    // card bg
     doc.setFillColor(...soft);
     doc.roundedRect(margin, y, pageWidth-margin*2, cardHeight, 3, 3, "F");
 
@@ -550,7 +471,6 @@ function createInvoicePDF(title,data,groupByCategory=false){
     });
   }
 
-  // ===== TOTAL CARD =====
   if(y + 24 > pageHeight - 20){ doc.addPage(); y = 20; }
 
   doc.setFillColor(...accent);
@@ -560,7 +480,6 @@ function createInvoicePDF(title,data,groupByCategory=false){
   doc.text("TOTAL SPENT", margin+6, y+11);
   doc.text(`Rs ${total.toString()}`, pageWidth-margin-6, y+11, {align:"right"});
 
-  // ===== FOOTER =====
   doc.setFontSize(8.5);
   doc.setTextColor(120,120,120);
   doc.text("BARHAT BSDC – Personal Expense Report", pageWidth/2, pageHeight-10, {align:"center"});
@@ -572,6 +491,13 @@ function runTests(){
   const required=["homePage","historyPage","allPdfMonth","historyMonth"];
   const missing=required.filter(id=>!$(id));
   if(missing.length>0){console.error("Missing required elements:",missing);}else{console.log("UI self-test passed ✔");}
+
+  // New test: ensure openDeletePage exists
+  if(typeof openDeletePage!=="function"){
+    console.error("openDeletePage is not defined");
+  } else {
+    console.log("openDeletePage test passed ✔");
+  }
 }
 
 init();
